@@ -8,10 +8,13 @@ def yes():
     wopen.close()
 
     aopen = open(filename,'a')
+    grid = ""
     for i in range(500):
         for j in range(500):
-            aopen.write("255 125 0 ")
-        aopen.write('\n')
+            grid += "125 125 255 "
+        grid += '\n'
+    aopen.write(grid)
+    aopen.close()
         
 
 if (__name__ == "__main__"):
